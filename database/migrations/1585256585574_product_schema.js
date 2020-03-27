@@ -32,7 +32,7 @@ class ProductSchema extends Schema {
     this.create('category_product', (table) => {
       table.increments()
       table.integer('product_id').unsigned
-      table.integer('category_id').unsigned" 
+      table.integer('category_id').unsigned
 
       table.foreign('category_id')
       .references('id')
