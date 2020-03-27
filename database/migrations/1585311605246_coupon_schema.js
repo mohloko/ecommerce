@@ -7,7 +7,7 @@ class CouponSchema extends Schema {
   up () {
     this.create('coupons', (table) => {
       table.increments()
-      table.string('code', 100)notNullable()
+      table.string('code', 100).notNullable()
       table.dateTime('valid_from')
       table.dateTime('valid_until')
       table.integer('quantity').defaultTo('1')

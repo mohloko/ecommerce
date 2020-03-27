@@ -15,12 +15,13 @@ class CouponProductSchema extends Schema {
       table.foreign('product_id').references('id').onTable('products').onDelete('cascade')
     })
   }
-    })
-  }
+
+
 
   down () {
     this.drop('coupon_products')
   }
 }
+
 
 module.exports = CouponProductSchema
