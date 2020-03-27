@@ -13,8 +13,8 @@ class OrderItemSchema extends Schema {
       table.decimal('subtotal', 12,2)
       table.timestamps()
 
-      table.foreign('product_id').references('id').onTable('products').onDelete('cascade')
-      table.foreign('order_id').references('id').onTable('orders').onDelete('cascade')
+      table.foreign('product_id').references('id').inTable('products').onDelete('cascade')
+      table.foreign('order_id').references('id').inTable('orders').onDelete('cascade')
     })
   }
 

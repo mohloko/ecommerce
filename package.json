@@ -30,7 +30,8 @@
     "@adonisjs/websocket": "^1.0.12",
     "adonis-acl": "^1.1.1",
     "adonis-bumblebee": "^2.1.0",
-    "mariasql": "^0.2.6"
+    "mariasql": "^0.2.6",
+    "sqlite3": "^4.1.1"
   },
   "devDependencies": {},
   "autoload": {
