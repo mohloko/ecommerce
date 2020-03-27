@@ -13,7 +13,7 @@ class ProductSchema extends Schema {
       table.decimal('price', 12, 2)
       table.timestamps()
 
-      table.foreign('image_id').references('id').inTable('images').onDelete('cascade')
+      table.foreign('image_id').references('id').inTable('image_product').onDelete('cascade')
     })
 
     this.create('image_product', (table) => {
@@ -21,7 +21,12 @@ class ProductSchema extends Schema {
       table.integer('image_id').unsigned()
       table.integer('product_id').unsigned()
       table.timestamps()
-      table.foreign('product_id').references('id').inTable('products').onDelete('cascade')
+
+      table
+      .foreign('product_id')
+      .references('id')
+      .inTable('products')
+      .onDelete('cascade')
     })
   }
 
